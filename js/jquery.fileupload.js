@@ -1,31 +1,5 @@
-/*
- * jQuery File Upload Plugin
- * https://github.com/blueimp/jQuery-File-Upload
- *
- * Copyright 2010, Sebastian Tschan
- * https://blueimp.net
- *
- * Licensed under the MIT license:
- * https://opensource.org/licenses/MIT
- */
-
-/* global define, require */
-/* eslint-disable new-cap */
-
-(function (factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    // Register as an anonymous AMD module:
-    define(['jquery', 'jquery-ui/ui/widget'], factory);
-  } else if (typeof exports === 'object') {
-    // Node/CommonJS:
-    factory(require('jquery'), require('./vendor/jquery.ui.widget'));
-  } else {
-    // Browser globals:
-    factory(window.jQuery);
-  }
-})(function ($) {
-  'use strict';
+import $ from 'jquery';
+import './vendor/jquery.ui.widget';
 
   // Detect file input support, based on
   // https://viljamis.com/2012/file-upload-support-on-mobile/
@@ -1601,4 +1575,3 @@
       return this._getXHRPromise(false, data && data.context);
     }
   });
-});

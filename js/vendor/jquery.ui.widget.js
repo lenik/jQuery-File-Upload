@@ -1,25 +1,4 @@
-/*! jQuery UI - v1.12.1+0b7246b6eeadfa9e2696e22f3230f6452f8129dc - 2020-02-20
- * http://jqueryui.com
- * Includes: widget.js
- * Copyright jQuery Foundation and other contributors; Licensed MIT */
-
-/* global define, require */
-/* eslint-disable no-param-reassign, new-cap, jsdoc/require-jsdoc */
-
-(function (factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['jquery'], factory);
-  } else if (typeof exports === 'object') {
-    // Node/CommonJS
-    factory(require('jquery'));
-  } else {
-    // Browser globals
-    factory(window.jQuery);
-  }
-})(function ($) {
-  ('use strict');
+import $ from 'jquery';
 
   $.ui = $.ui || {};
 
@@ -802,4 +781,3 @@
       }
     };
   });
-});

@@ -1,48 +1,11 @@
-/*
- * jQuery File Upload Image Preview & Resize Plugin
- * https://github.com/blueimp/jQuery-File-Upload
- *
- * Copyright 2013, Sebastian Tschan
- * https://blueimp.net
- *
- * Licensed under the MIT license:
- * https://opensource.org/licenses/MIT
- */
-
-/* global define, require */
-
-(function (factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    // Register as an anonymous AMD module:
-    define([
-      'jquery',
-      'load-image',
-      'load-image-meta',
-      'load-image-scale',
-      'load-image-exif',
-      'load-image-orientation',
-      'canvas-to-blob',
-      './jquery.fileupload-process'
-    ], factory);
-  } else if (typeof exports === 'object') {
-    // Node/CommonJS:
-    factory(
-      require('jquery'),
-      require('blueimp-load-image/js/load-image'),
-      require('blueimp-load-image/js/load-image-meta'),
-      require('blueimp-load-image/js/load-image-scale'),
-      require('blueimp-load-image/js/load-image-exif'),
-      require('blueimp-load-image/js/load-image-orientation'),
-      require('blueimp-canvas-to-blob'),
-      require('./jquery.fileupload-process')
-    );
-  } else {
-    // Browser globals:
-    factory(window.jQuery, window.loadImage);
-  }
-})(function ($, loadImage) {
-  'use strict';
+import 'jquery';
+import 'blueimp-load-image/js/load-image';
+import 'blueimp-load-image/js/load-image-meta';
+import 'blueimp-load-image/js/load-image-scale';
+import 'blueimp-load-image/js/load-image-exif';
+import 'blueimp-load-image/js/load-image-orientation';
+import 'blueimp-canvas-to-blob';
+import './jquery.fileupload-process';
 
   // Prepend to the default processQueue:
   $.blueimp.fileupload.prototype.options.processQueue.unshift(
@@ -344,4 +307,3 @@
       }
     }
   });
-});
